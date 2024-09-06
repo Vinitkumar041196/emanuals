@@ -1,0 +1,84 @@
+body { 
+    margin: 0;
+}
+
+html {
+    background-color: black;
+    font-family: sans-serif;
+}
+
+.body-text {
+    color: whitesmoke;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.bottom-banner {
+    background: black;
+    background-image: linear-gradient(to right, black, blue);
+    bottom: 0;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.caption-sm {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+}
+
+.caption-lg {
+    font-size: 2.5rem;
+    letter-spacing: .4rem;
+}
+
+.caption-fine {
+    font-family: 'Courier New', Courier, 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: .05rem;
+}
+
+.content-area {
+    background-color: black;
+    background-image: url("/images/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    padding: 2rem;
+    text-align: center;
+}
+
+.index-img {
+    margin: 1rem;
+    width: 40%;
+}
+
+.specs-area {
+    background-color: darkblue;
+    background-image: url("/images/3d-bkg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    margin-bottom: 6rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    text-align: center;
+}
+
+.specs-img {
+    margin: 1rem;
+    width: 35%;
+}
+
+.top-banner {
+    background: black;
+    background-image: linear-gradient(to right, black, blue);
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem 2rem;
+    text-align: center;
+}

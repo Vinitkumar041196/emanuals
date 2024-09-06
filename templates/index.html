@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/nightowl.css">
+    <title>Night Owl Airlines Maintenance</title>
+</head>
+
+<body>
+    <div class="top-banner">
+        <p class="caption-sm">NIGHT OWL AIRLINES</p>
+        <p class="caption-lg">MAINTENANCE DEPT.</p>
+    </div>
+
+    <div class="content-area">
+
+        {{ range $var:= .}}
+        <a href="/manuals/{{$var}}.html">
+            <img src="/images/{{$var}}.jpg" alt="{{$var}}"/>
+        </a>
+        {{end}}
+
+    </div>
+
+    <div class="bottom-banner">
+        <p class="caption-fine">COPYRIGHT (C) 2024 NIGHT OWL AIRLINES</p>
+    </div>
+</body>
+</html>
