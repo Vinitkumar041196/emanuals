@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"time"
 )
 
 func getFileList(dir string) ([]string, error) {
@@ -43,12 +44,24 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 	tmp.Execute(w, files)
 }
 
+func handleNews(w http.ResponseWriter, r *http.Request) {
+	tmp, err := template.ParseFiles("templates/news.html")
+	if err != nil {
+		w.WriteHeader(http.StatusNotFound)
+		fmt.Fprintf(w, "Required resource not found: %s", err.Error())
+		return
+	}
+
+	tmp.Execute(w, time.Now().Format("02/01/2006"))
+}
+
 func main() {
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./static/css"))))
 	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("./static/images"))))
 	http.Handle("/manuals/", http.StripPrefix("/manuals/", http.FileServer(http.Dir("./static/manuals"))))
 
 	http.HandleFunc("/", handleRoot)
+	http.HandleFunc("/news", handleNews)
 
 	log.Println("listening on port 3000...")
 	http.ListenAndServe(":3000", nil)
